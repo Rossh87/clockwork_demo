@@ -22,8 +22,16 @@
                 ">
 			<div class="container">
 				<a class="navbar-brand p-1 cd_focus-border--white" href="#">Navbar</a>
+				<?php
+				wp_nav_menu(array(
+					'menu' => 'cd_nav',
+					'container' => false,
+					'menu_class' => "navbar-nav mb-2 mb-lg-0 flex-row"
+				))
+				?>
 
 				<ul class="navbar-nav mb-2 mb-lg-0 flex-row">
+
 					<li class="nav-item mx-1 visually-hidden-focusable">
 						<a class="
                                         nav-link
@@ -45,19 +53,6 @@
 					</li>
 					<li class="nav-item mx-1">
 						<a class="nav-link p-1 cd_focus-border--white" href="#">Careers</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							Dropdown
-						</a>
-						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li>
-								<hr class="dropdown-divider">
-							</li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
 					</li>
 				</ul>
 			</div>
