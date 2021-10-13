@@ -1,0 +1,154 @@
+/**
+Theme Name: clockwork_demo
+Author: Ross Hunter
+**/
+
+/* 
+    01 - Variables
+    02 - Size & Positioning
+    03 - Header Components
+    04 - Main Components
+    05 - Footer Components
+    06 - Text and Color Utilities
+        6.1 - Focus Utilities
+        6.2 - Animation Utilities
+        6.3 - Transparency Utilities
+*/
+
+/* 01 - Variables */
+:root {
+	--accent-color: #0dcaf0;
+	--jumbo-padding-y: 8rem;
+}
+
+/* 02 - Size & Positioning */
+html {
+	font-size: 14px;
+}
+
+@media screen and (min-width: 600px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+.cd_jumbo-py-md {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 900px) {
+	.cd_jumbo-py-md {
+		padding-top: 8rem;
+		padding-bottom: 8rem;
+	}
+}
+
+/* 03 - Header Components */
+.cd_ .cd_hero_button {
+	border-color: var(--accent-color);
+	color: var(--accent-color);
+}
+
+.cd_hero {
+	position: relative;
+}
+
+.cd_hero_content {
+	position: relative;
+}
+
+.cd_hero:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+	background-size: cover;
+}
+
+/* 04 - Main Components */
+.cd_article-block--spaced-bottom {
+	padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 900px) {
+	.cd_article-block--spaced-bottom {
+		padding-bottom: 8rem;
+	}
+}
+
+.cd_article-block_header {
+	border-left: 0.5rem solid var(--accent-color);
+}
+
+.cd_article-block_arrow {
+	color: var(--accent-color);
+	display: inline-block;
+	transition: all 0.2s ease-in-out;
+}
+
+.cd_article-block_link:hover .cd_article-block_arrow,
+.cd_article-block_link:focus .cd_article-block_arrow {
+	transform: translateX(0.5rem) scale(1.2);
+}
+
+/* 06 - Text and Color Utilities */
+
+/* 6.1 - Focus Utilities */
+.cd_focus-border--white {
+	border: 0.25rem solid transparent;
+	outline: none;
+}
+
+.cd_focus-border--white:focus {
+	border: 0.25rem solid white;
+}
+
+.cd_focus-border--accent {
+	border: 0.25rem solid transparent;
+	outline: none;
+}
+
+.cd_focus-border--accent:focus {
+	border: 0.25rem solid var(--accent-color);
+}
+
+/* 6.2 - Animation Utilities */
+.cd_animated-underline--accent {
+	position: relative;
+	overflow: hidden;
+}
+
+.cd_animated-underline--accent::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 70%;
+	height: 0.1em;
+	background-color: var(--accent-color);
+	opacity: 0;
+	transition: transform 0.2s ease-in-out;
+	opacity: 1;
+	transform: translateX(-100%);
+	overflow: hidden;
+}
+
+.cd_animated-underline--accent:hover::after {
+	transform: translateX(15%);
+}
+
+/* 6.3 - Transparency Utilities */
+.card-img-overlay {
+	background-color: rgba(0, 0, 0, 0.85);
+	opacity: 0;
+}
+.card-img-overlay.show {
+	opacity: 1;
+}
