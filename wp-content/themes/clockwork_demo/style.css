@@ -1,8 +1,3 @@
-/**
-Theme Name: clockwork_demo
-Author: Ross Hunter
-**/
-
 /* 
     01 - Variables
     02 - Size & Positioning
@@ -96,6 +91,14 @@ html {
 .cd_article-block_link:hover .cd_article-block_arrow,
 .cd_article-block_link:focus .cd_article-block_arrow {
 	transform: translateX(0.5rem) scale(1.2);
+}
+
+.cd_avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 /* 06 - Text and Color Utilities */
