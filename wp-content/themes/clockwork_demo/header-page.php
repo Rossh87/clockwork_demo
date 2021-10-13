@@ -16,8 +16,8 @@
                     navbar
                     fixed-top
                     navbar-expand-sm 
-                    navbar-dark
-                    bg-transparent
+                    navbar-light
+                    bg-light
                     container-fluid
                 ">
 			<div class="container">
