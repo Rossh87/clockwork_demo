@@ -31,3 +31,22 @@ function cd_construct_category_string()
 
 	return $cat_string;
 }
+
+function cd_construct_tags_string()
+{
+	$tag_string = '';
+
+	$posttags = get_the_tags();
+
+	if ($posttags) {
+		foreach ($posttags as $tag) {
+			$tag_string .= $tag->name . ', ';
+		}
+	}
+
+	if (!is_non_empty_string($tag_string)) {
+		$tag_string = 'none';
+	}
+
+	return $tag_string;
+}

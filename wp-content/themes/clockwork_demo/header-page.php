@@ -11,6 +11,7 @@
 </head>
 
 <body>
+	<?php wp_body_open(); ?>
 	<header>
 		<nav class="
                     navbar
@@ -21,7 +22,7 @@
                     container-fluid
                 ">
 			<div class="container">
-				<a class="navbar-brand p-1 cd_focus-border--white" href="#">Navbar</a>
+				<a class="navbar-brand p-1 cd_focus-border--white" href="<?php echo home_url(); ?>">Navbar</a>
 
 				<ul class="navbar-nav mb-2 mb-lg-0 flex-row">
 					<li class="nav-item mx-1 visually-hidden-focusable">

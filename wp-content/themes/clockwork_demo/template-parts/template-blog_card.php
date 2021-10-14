@@ -23,7 +23,7 @@ $category_string = cd_construct_category_string();
 				<header class="d-flex justify-content-start mb-3">
 
 					<span aria-labelledby="<?php echo $header_elements_id; ?>" aria-role="img" style='background-image: url("<?php echo $avatar_url; ?>");' alt="Blog post author" class="cd_avatar me-3"></span>
-					<small id="<?php $header_elements_id; ?>" class="text-black-50 pt-3 text-center"><?php echo $author_name; ?></small>
+					<small id="<?php echo $header_elements_id; ?>" class="text-black-50 pt-3 text-center"><?php echo $author_name; ?></small>
 				</header>
 				<h5 class="card-title pb-3"><?php echo $title; ?></h5>
 				<p class="card-text"><?php echo $excerpt; ?></p>
