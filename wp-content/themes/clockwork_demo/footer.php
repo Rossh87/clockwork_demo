@@ -4,9 +4,7 @@
 		<p class="text-black">
 			Copyright Consultify 2021
 		</p>
-		<div class="d-flex">
-			here's stuff
-		</div>
+		<?php dynamic_sidebar('footer-social-widget'); ?>
 	</div>
 </footer>
 </body>
