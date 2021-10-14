@@ -53,7 +53,7 @@ function consultants_setup_post_type()
 		'label'                 => __('Consultant', 'text_domain'),
 		'description'           => __('Consultify employee', 'text_domain'),
 		'labels'                => $labels,
-		'supports'              => array('title', 'editor'),
+		'supports'              => array('title', 'editor', 'thumbnail'),
 		'taxonomies'            => array('category', 'post_tag'),
 		'hierarchical'          => false,
 		'public'                => true,
@@ -72,7 +72,7 @@ function consultants_setup_post_type()
 }
 add_action('init', 'consultants_setup_post_type', 0);
 
-function pluginprefix_activate()
+function consultants_activate()
 {
 	// Trigger our function that registers the custom post type plugin.
 	consultants_setup_post_type();
@@ -80,4 +80,11 @@ function pluginprefix_activate()
 	flush_rewrite_rules();
 }
 
-register_activation_hook(__FILE__, 'pluginprefix_activate');
+function consultants_deactivate()
+{
+	unregister_post_type('consultant');
+}
+
+
+register_activation_hook(__FILE__, 'consultants_activate');
+register_deactivation_hook(__FILE__, 'consultants_deactivate');
