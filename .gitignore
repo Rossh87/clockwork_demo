@@ -8,5 +8,9 @@
 !docker-compose.yaml
 !*.md
 
+# Unignore scripts
+!scripts
+!scripts/*
+
 # Ignore wp-content/uploads--should be backed up with database, not source control
 wp-content/uploads/
