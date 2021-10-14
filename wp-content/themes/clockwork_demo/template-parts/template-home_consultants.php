@@ -10,16 +10,6 @@
 		<h2 id="consultants-section-heading" class="px-2 fs-2 text-black-50">
 			Our Consultants
 		</h2>
-		<a aria-labelledby="consultants-section-heading" class="
-                            nav-link
-                            fs-4
-                            text-black-50
-                            cd_focus-border--accent
-                            text-capitalize
-                            cd_article-block_link
-                            cd_animated-underline--accent
-                        " href="/our-consultants">read more
-			<span class="cd_article-block_arrow">></span></a>
 	</div>
 	<div class="container">
 		<div class="row justify-content-center">

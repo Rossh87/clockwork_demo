@@ -14,7 +14,7 @@ $blog_archive_url = get_permalink(get_page_by_title('Blog Archive'));
 		<h2 id="blog-section-heading" class="px-2 fs-2 text-black-50">
 			From the Team
 		</h2>
-		<a aria-labelledby="blog-section-heading" class="
+		<a aria-label="all blog posts" class="
                             nav-link
                             fs-4
                             text-black-50
@@ -30,8 +30,8 @@ $blog_archive_url = get_permalink(get_page_by_title('Blog Archive'));
 			<?php
 			$retrieved_post_count = 0;
 			$blog_query = new WP_Query(array('post_type' => 'post', 'posts_per_page'));
-			if ($blog_query->have_posts() && $retrieved_post_count < 3) :
-				while ($blog_query->have_posts()) :
+			if ($blog_query->have_posts()) :
+				while ($blog_query->have_posts() && $retrieved_post_count < 3) :
 					$blog_query->the_post();
 					get_template_part('template-parts/template', 'blog_card');
 					$retrieved_post_count++;
