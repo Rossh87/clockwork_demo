@@ -1,7 +1,7 @@
 <?php
 get_header('page');
 ?>
-<main class="container push-down">
+<main id="main-content" class="container push-down">
 	<article class='w-50 mx-auto mb-5'>
 		<header class="text-center mb-3">
 			<h1 class="fs-1">About Our Business</h1>
@@ -10,3 +10,4 @@ get_header('page');
 		<?php the_content() ?>
 	</article>
 </main>
+<?php get_footer(); ?>

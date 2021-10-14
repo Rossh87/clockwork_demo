@@ -7,6 +7,7 @@
 		<?php dynamic_sidebar('footer-social-widget'); ?>
 	</div>
 </footer>
+</div>
 </body>
 
 </html>

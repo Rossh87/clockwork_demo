@@ -12,8 +12,9 @@
 
 <body>
 	<?php wp_body_open(); ?>
-	<header>
-		<nav class="
+	<div class="fill-vertical">
+		<header>
+			<nav class="
                     navbar
                     fixed-top
                     navbar-expand-sm 
@@ -21,18 +22,18 @@
                     bg-light
                     container-fluid
                 ">
-			<div class="container">
-				<a class="navbar-brand p-1 cd_focus-border--white" href="<?php echo home_url(); ?>">
-					<?php echo get_bloginfo('name') ?>
-				</a>
-				<?php
-				wp_nav_menu(array(
-					'menu' => 'cd_nav',
-					'container' => false,
-					'menu_class' => "navbar-nav mb-2 mb-lg-0 flex-row"
-				))
-				?>
-				<!-- <ul class="navbar-nav mb-2 mb-lg-0 flex-row">
+				<div class="container">
+					<a class="navbar-brand p-1 cd_focus-border--white" href="<?php echo home_url(); ?>">
+						<?php echo get_bloginfo('name') ?>
+					</a>
+					<?php
+					wp_nav_menu(array(
+						'menu' => 'cd_nav',
+						'container' => false,
+						'menu_class' => "navbar-nav mb-2 mb-lg-0 flex-row"
+					))
+					?>
+					<!-- <ul class="navbar-nav mb-2 mb-lg-0 flex-row">
 					<li class="nav-item mx-1 visually-hidden-focusable">
 						<a class="
                                         nav-link
@@ -69,6 +70,6 @@
 						</ul>
 					</li>
 				</ul> -->
-			</div>
-		</nav>
-	</header>
+				</div>
+			</nav>
+		</header>

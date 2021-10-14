@@ -12,7 +12,7 @@ $hire_date = get_field('hire_date');
 $areas_of_expertise = get_field('expertise');
 ?>
 
-<main class="container py-5">
+<main id="main-content" class="container py-5">
 	<div class="w-50 mx-auto">
 		<?php echo get_the_post_thumbnail($post_id, 'large'); ?>
 		<article class="fs-5 py-5">

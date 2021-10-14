@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function run() {
 	manageHeroHeaderContrast();
 	enableCategoryFilterButton();
+	hideSkipLink();
 }
 
 function manageHeroHeaderContrast() {
@@ -110,4 +111,9 @@ function enableCategoryFilterButton() {
 			return;
 		}
 	})
+}
+
+function hideSkipLink() {
+	const toHide = document.querySelector('.menu-item-71');
+	toHide.classList.add('visually-hidden-focusable')
 }

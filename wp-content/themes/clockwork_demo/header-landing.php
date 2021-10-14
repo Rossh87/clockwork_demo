@@ -29,7 +29,6 @@
 					}
 					echo get_bloginfo('name');
 					?>
-
 				</a>
 				<?php
 				wp_nav_menu(array(
