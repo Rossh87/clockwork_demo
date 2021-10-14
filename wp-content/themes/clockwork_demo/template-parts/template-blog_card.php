@@ -6,9 +6,7 @@ $post_id = get_the_ID();
 $avatar_url = get_avatar_url(get_the_author_meta('ID'));
 $title = get_the_title();
 $excerpt = get_the_excerpt();
-$pulication_date = get_the_date();
 $header_elements_id = "blog-card-head-" . $post_id;
-$publication_date_string = "Published " . $publication_date;
 $author_name = cd_construct_author_name();
 $category_string = cd_construct_category_string();
 ?>

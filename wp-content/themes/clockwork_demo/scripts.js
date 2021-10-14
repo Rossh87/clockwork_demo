@@ -2,6 +2,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	run();
 });
 
+function run() {
+	manageHeroHeaderContrast();
+}
+
 function manageHeroHeaderContrast() {
 	const hero = document.getElementById('cd_hero');
 
@@ -78,8 +82,4 @@ function removeClasses(node, toRemove) {
 
 function addClasses(node, toRemove) {
     toRemove.forEach((cssClass) => node.classList.add(cssClass));
-}
-
-function run() {
-	manageHeroHeaderContrast();
 }

@@ -65,7 +65,7 @@
 				}
 			</style>
 		<?php endif; ?>
-		<div id="hero" class="text-center bg-dark text-white cd_hero cd_jumbo-py-md">
+		<div id="cd_hero" class="text-center bg-dark text-white cd_hero cd_jumbo-py-md">
 			<h1 class="display-5 fw-bold">Build your business</h1>
 			<div class="col-lg-6 col-sm-8 mx-auto hero_content">
 				<p class="fs-5 mb-4">
