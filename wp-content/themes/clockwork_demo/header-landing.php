@@ -22,7 +22,15 @@
                     container-fluid
                 ">
 			<div class="container">
-				<a class="navbar-brand p-1 cd_focus-border--white" href="<?php echo home_url(); ?>">Navbar</a>
+				<a class="navbar-brand p-1 cd_focus-border--white" href="<?php echo home_url(); ?>">
+					<?php
+					if (function_exists('the_custom_logo')) {
+						echo the_custom_logo();
+					}
+					echo get_bloginfo('name');
+					?>
+
+				</a>
 				<?php
 				wp_nav_menu(array(
 					'menu' => 'cd_nav',
@@ -31,7 +39,7 @@
 				))
 				?>
 
-				<ul class="navbar-nav mb-2 mb-lg-0 flex-row">
+				<!-- <ul class="navbar-nav mb-2 mb-lg-0 flex-row">
 
 					<li class="nav-item mx-1 visually-hidden-focusable">
 						<a class="
@@ -55,7 +63,7 @@
 					<li class="nav-item mx-1">
 						<a class="nav-link p-1 cd_focus-border--white" href="#">Careers</a>
 					</li>
-				</ul>
+				</ul> -->
 			</div>
 		</nav>
 		<?php if (get_header_image()) : ?>

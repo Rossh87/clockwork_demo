@@ -29,6 +29,11 @@ html {
 	}
 }
 
+/* Ensures page content clears bottom of absolutely-positioned navbar */
+.push-down {
+	margin-top: 5rem;
+}
+
 .cd_jumbo-py-md {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
