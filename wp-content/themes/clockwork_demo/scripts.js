@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function run() {
 	manageHeroHeaderContrast();
+	enableCategoryFilterButton();
 }
 
 function manageHeroHeaderContrast() {
@@ -82,4 +83,31 @@ function removeClasses(node, toRemove) {
 
 function addClasses(node, toRemove) {
     toRemove.forEach((cssClass) => node.classList.add(cssClass));
+}
+
+function enableCategoryFilterButton() {
+	const btn = document.getElementById('category-filter-submit');
+	const select = document.getElementById('blogCategoryFilter');
+
+	if(!btn || !select) {
+		return;
+	}
+
+	select.addEventListener('change', (e) => {
+		const {value} = e.target;
+
+		if(value && btn.disabled) {
+			btn.classList.remove('btn-disabled');
+			btn.classList.add('btn-info');
+			btn.disabled = false;
+			return;
+		}
+
+		if(!value && !btn.disabled){
+			btn.classList.add('btn-disabled');
+			btn.classList.remove('btn-info');
+			btn.disabled = true;
+			return;
+		}
+	})
 }

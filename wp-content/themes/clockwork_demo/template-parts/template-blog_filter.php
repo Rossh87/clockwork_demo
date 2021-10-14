@@ -12,10 +12,11 @@ $terms = ($terms = get_terms(array(
 	<?php if ($terms) : ?>
 		<label class="fs-6" for="blogCategoryFilter">Select A Category To Read More:</label>
 		<select name="blogCategoryFilter" id="blogCategoryFilter" class="form-select mt-3">
+			<option value=null>-Choose One-</option>
 			<?php foreach ($terms as $term) : ?>
 				<option value="<?php echo $term->term_id; ?>"><?php echo $term->name; ?></option>
 			<?php endforeach; ?>
 		</select>
 	<?php endif; ?>
-	<button type='submit' class="btn btn-info mt-3">Search</button>
+	<button id="category-filter-submit" type='submit' disabled class="btn btn-disabled mt-3">Search</button>
 </form>
