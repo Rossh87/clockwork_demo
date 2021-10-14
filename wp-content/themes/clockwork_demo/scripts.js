@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+	run();
+});
+
+function manageHeroHeaderContrast() {
+	const hero = document.getElementById('cd_hero');
+
+	const hasHero = hero !== null && hero !== undefined;
+
+	if(!hasHero) {
+		return;
+	}
+
     const header = document.querySelector('header');
     const headerHeight = header.getBoundingClientRect().height;
     const nav = document.querySelector('nav');
@@ -58,7 +70,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             handleDarken();
         }
     });
-});
+}
 
 function removeClasses(node, toRemove) {
     toRemove.forEach((cssClass) => node.classList.remove(cssClass));
@@ -66,4 +78,8 @@ function removeClasses(node, toRemove) {
 
 function addClasses(node, toRemove) {
     toRemove.forEach((cssClass) => node.classList.add(cssClass));
+}
+
+function run() {
+	manageHeroHeaderContrast();
 }
