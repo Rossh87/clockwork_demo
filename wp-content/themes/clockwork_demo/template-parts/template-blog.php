@@ -13,7 +13,7 @@ $author_string = $author_name . ", " . get_the_date();
 $tags_string = cd_construct_tags_string();
 ?>
 
-<main class="container py-5">
+<main id="main-content" class="container py-5">
 	<div class="w-50 mx-auto">
 		<?php echo get_the_post_thumbnail(get_the_ID(), 'large'); ?>
 		<article class="fs-5 py-5">

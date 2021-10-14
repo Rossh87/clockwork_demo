@@ -29,6 +29,22 @@ html {
 	}
 }
 
+/* Ensures page content clears bottom of absolutely-positioned navbar */
+.push-down {
+	margin-top: 5rem;
+}
+
+/* Next two styles ensure header stays at bottom regardless of content amount */
+.fill-vertical {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex-grow: 1;
+}
+
 .cd_jumbo-py-md {
 	padding-top: 4rem;
 	padding-bottom: 4rem;

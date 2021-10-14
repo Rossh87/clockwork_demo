@@ -4,7 +4,7 @@
 get_header('page')
 ?>
 
-<main class="container">
+<main id="main-content" class="container push-down">
 	<?php get_template_part('template-parts/template', 'blog_filter'); ?>
 	<div class="d-flex">
 		<div class="row justify-content-center" id="category-search-ajax-replaceable">
@@ -22,3 +22,5 @@ get_header('page')
 		</div>
 	</div>
 </main>
+
+<?php get_footer() ?>

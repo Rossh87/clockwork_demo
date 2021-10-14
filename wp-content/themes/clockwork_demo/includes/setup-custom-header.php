@@ -1,5 +1,5 @@
 <?php
-function cd_header_setup()
+function cd_custom_header_setup()
 {
 	$args = array(
 		'flex-width' => true,
@@ -12,4 +12,23 @@ function cd_header_setup()
 	add_theme_support('custom-header', $args);
 };
 
-add_action('after_setup_theme', 'cd_header_setup');
+function cd_custom_logo_setup()
+{
+	$defaults = array(
+		'height'               => 150,
+		'width'                => 150,
+		'flex-height'          => true,
+		'flex-width'           => true,
+		'unlink-homepage-logo' => true,
+	);
+
+	add_theme_support('custom-logo', $defaults);
+}
+
+function cd_full_header_setup()
+{
+	cd_custom_logo_setup();
+	cd_custom_header_setup();
+}
+
+add_action('after_setup_theme', 'cd_full_header_setup');
