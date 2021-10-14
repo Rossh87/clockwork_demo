@@ -60,7 +60,7 @@
 		</nav>
 		<?php if (get_header_image()) : ?>
 			<style>
-				#hero:before {
+				#cd_hero:before {
 					background-image: url('<?php header_image(); ?>');
 				}
 			</style>
