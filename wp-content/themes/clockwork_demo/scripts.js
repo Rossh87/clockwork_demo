@@ -114,6 +114,6 @@ function enableCategoryFilterButton() {
 }
 
 function hideSkipLink() {
-	const toHide = document.querySelector('.menu-item-71');
+	const toHide = document.querySelector('.menu-item-type-custom');
 	toHide.classList.add('visually-hidden-focusable')
 }
